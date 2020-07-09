@@ -1,6 +1,6 @@
 body
 {
-	padding: 0px;
+	padding: 0px;  
 	margin: 0px;
 }
 html
@@ -9,7 +9,7 @@ html
 }
 /*---------------------------------------------- Pageloader Area -----------------------------------------------------*/
 
-/* .no-js #loader { display: none;  }
+.no-js #loader { display: none;  }
 .js #loader { display: block; position: absolute; left: 100px; top: 0; }
 .se-pre-con {
 	position: fixed;
@@ -18,8 +18,8 @@ html
 	width: 100%;
 	height: 100%;
 	z-index: 9999;
-	background: url("images/Vanilla-0.6s-280px.gif") center no-repeat #fff;
-} */
+	background: url("images/loding.gif") center no-repeat #fff;
+}
 /*---------------------------------------------- Navbar Area -----------------------------------------------------*/
 .navbar
 {
@@ -41,12 +41,12 @@ html
 { 
 	font-family: 'Rancho' ;
 	font-family: 'Josefin Sans' ;
+	transition: .5s;
 }
 .nav-link:hover
 {
 	background-color: #f5f8fd;
 	border-radius: 5px;
-	transition: .5s;
 }
 
 .navbar-toggler
@@ -73,8 +73,17 @@ html
 }
 @media only screen and (max-width: 700px)
 {
+	.navbar{
+		padding: 20px;
+	}
+	#nav-brands
+	{
+		font-size: 20px;
+		margin-left: -30px;
+	}
 	.navbar-nav li
 	{
+		margin-left: 0;
 		padding: 0px;
 	}
 	.navbar-toggler-icon
@@ -116,6 +125,10 @@ html
 }
 @media only screen and (max-width: 700px)
 {
+	.banner-title h2
+{
+	margin-top: 50px;
+}
 	.banner-text
 	{
 		font-size: 30px!important;
@@ -123,6 +136,9 @@ html
 	.banner-text-p
 	{
 		font-size: 15px;
+	}
+	.banner-btn{
+		font-size: 20px;
 	}
 }
 /*---------------------------------------------- About Area -----------------------------------------------------*/
@@ -169,6 +185,10 @@ transform: translate(1px, -20px)!important;
 }
 @media only screen and (max-width: 700px)
 {
+	.about-h1 h4{
+		font-size: 26px;
+		margin-bottom: 0px;
+	}
 	.about-img-1
 	{
 		height: 450px;
@@ -181,6 +201,14 @@ transform: translate(1px, -20px)!important;
 	.about-h1
 	{
 		text-align: center;
+	}
+	.about-p h6 {
+		font-size: 15px;
+		line-height: 35px;
+	}
+	.about-p h6 i{
+		font-size: 18px;
+		padding: 8px;
 	}
 }
 
@@ -217,12 +245,12 @@ transform: translate(1px, -20px)!important;
 	cursor: pointer;
 	padding: 10px;
 	margin-bottom: 20%;
+	transition: .5s!important;
 }
 
 .cd1:hover
 {
 	background-color: #130f40;
-	transition: .5s!important;
 	-moz-transform: translate(1px, -20px);
 	-webkit-transform: translate(1px, -20px);
 	-o-transform: translate(1px, -20px);
@@ -237,11 +265,11 @@ transform: translate(1px, -20px)!important;
 	padding: 10px;
 	border-radius: 5px;
 	margin-bottom: 20%;
+	transition: .5s!important;
 }
 .cd2:hover
 {
 	background-color: #3867d6;
-	transition: .5s!important;
 	-moz-transform: translate(1px, -20px);
 	-webkit-transform: translate(1px, -20px);
 	-o-transform: translate(1px, -20px);
@@ -255,11 +283,11 @@ transform: translate(1px, -20px)!important;
 	cursor: pointer;
 	padding: 10px;
 	margin-bottom: 30%;
+	transition: .5s!important;
 }
 .cd3:hover
 {
 	background-color: #eb3b5a;
-	transition: .5s!important;
 	-moz-transform: translate(1px, -20px);
 	-webkit-transform: translate(1px, -20px);
 	-o-transform: translate(1px, -20px);
@@ -273,7 +301,36 @@ transform: translate(1px, -20px)!important;
 	color: #f5f8fd;
 }
 @media only screen and (max-width: 700px)
+{	
+	.card
 {
+ 	margin-top: 30px;
+}
+.cd1 
+{
+	padding: 0;
+	margin-bottom: 20%;
+}
+.cd2 
+{
+	padding: 0;
+	margin-bottom: 20%;
+}
+.cd3 
+{
+	padding: 0;
+	margin-bottom: 20%;
+}
+	.title-service::before
+{
+	height: 3px;
+	width: 130px;
+	transform: translateY(50px);
+}
+	.services  h1
+{
+	font-size: 26px;
+}
 	.title-service
 	{
 		font-size: 30px;	
@@ -332,11 +389,11 @@ transform: translate(1px, -20px)!important;
 {
 	text-align: center;
 	margin-top: 10px;
+	transition: .5s!important;
 }
 .why-img :hover
 {
 	transform: translate(1px, -10px)!important;
-	transition: .5s!important;
 	box-shadow: 10px 32px 35px -33px rgba(0,0,0,0.75);
 }
 .why-img img
@@ -348,53 +405,41 @@ transform: translate(1px, -20px)!important;
 }
 @media only screen and (max-width: 700px)
 {
-	/* #nav-brands
-	{
-		font-size: 30px;
-		padding: 0px;
-		font-family: 'Rancho' ;
-		font-family: 'Josefin Sans';
-		margin-top: 5px;
-		color: black;
-	} */
-	#nav-brands
-	{
-		justify-content: flex-start;
-		font-size: 20px;
-	}
+	
 	.why
 	{
 		font-size: 23px;	
+		padding: 20px;
 
 	}
 	.why::before
 	{
 		content: "";
 		width: 200px;
-		height: 5px;
+		height: 3px;
 		margin-left: auto;
 		margin-right: auto;
 		background: blue;
 		display: block;
-		transform: translateY(63px);
+		transform: translateY(50px);
 	}
 	.why-content h4
 	{
 		font-weight: 900;
 		color: blue;
 		font-family: 'Cabin', sans-serif;
-		margin-left: 30px;
 	}
 	.why-content p
 	{
+		font-size: 15px;
 		margin-left: 0px;
 		font-family: 'Cabin', sans-serif;
-		margin-top: 40px;
-		line-height: 30px;
+		margin-top: 20px;
+		line-height: 35px;
 	}
 	.why-content span
 	{
-		font-size: 30px;
+		font-size: 22px;
 	}
 }
 /*---------------------------------------------- Our team Area -----------------------------------------------------*/
@@ -459,13 +504,13 @@ transform: translate(1px, -20px)!important;
 	.our-team-title::before
 	{	
 		content: "";
-		width: 150px;
+		width: 100px;
 		height: 5px;
 		margin-left: auto;
 		margin-right: auto;
 		background: blue;
 		display: block;
-		transform: translateY(63px);
+		transform: translateY(50px);
 	}
 }
 /*---------------------------------------------- Contacts Area -----------------------------------------------------*/
@@ -494,24 +539,24 @@ transform: translate(1px, -20px)!important;
 {
 	font-size: 30px;
 	color: #adb5bd;
-	padding: 10px;
+	padding: 5px;
 }
 .contact-address
 {
-	margin-top: 30px;
+	margin-top: 10px;
 }
 .company
 {
-	margin-top: 20px;
+	margin-top: 10px;
 }
 .features
 {
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 .dcoumentations
 {
-	margin-top: 20px;
+	margin-top: 10px;
 }
 .company a ,.features a,.dcoumentations a
 {
@@ -537,4 +582,34 @@ transform: translate(1px, -20px)!important;
 {
 	font-size: 15px;
 	color: #adb5bd;
+}
+@media(max-width: 700px){
+	.contact-address{
+		text-align: center;
+	}
+	.contact-address i{
+		font-size: 18px;
+	}
+	.contact-address p{
+		font-size: 20px;
+	}
+	.col-md-3{
+		position: relative;
+    width: 50%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+	}
+	.company h3{
+		font-size: 18px;
+	}
+	.company a ,
+	.features a,
+	.dcoumentations a{
+	color: #adb5bd;
+	padding: 0;
+	}
+	.icons{
+		text-align: center !important;
+	}
 }
